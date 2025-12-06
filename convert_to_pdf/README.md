@@ -104,3 +104,4 @@ Solution: install using → pip install pywin32
 📝 License
 -------------------------------
 Free to modify and distribute for personal and commercial use.
+-------------------------------
