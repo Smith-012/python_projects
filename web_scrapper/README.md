@@ -212,16 +212,3 @@ This project is perfect when you want to:
 * This tool is for **educational and personal research** purposes.
 
 ---
-
-## 📞 Need More Features?
-
-I can help you add:
-
-* Auto-follow links (crawler mode)
-* Domain restriction
-* Depth limits (crawl within 2 pages)
-* Scraping data into a database (MongoDB / MySQL)
-* Browserless API support
-* Cloud deployment (Render / Railway)
-
-Just tell me what you want next!
