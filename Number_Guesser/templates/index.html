@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Number Guesser</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <div class="card">
+            <header class="header">
+                <h1>🎯 Number Guesser</h1>
+                <button id="themeBtn" class="theme-btn" aria-label="Toggle theme">🌙</button>
+            </header>
+            <section class="range">
+                <form method="post" action="/start" class="row">
+                    <label>Min
+                        <input type="text" name="min" placeholder="1" autocomplete="off">
+                    </label>
+                    <label>Max
+                        <input type="text" name="max" placeholder="100" autocomplete="off">
+                    </label>
+                    <button type="submit">Start / Reset</button>
+                </form>
+            </section>
+            {% if secret is not none %}
+            <section class="play">
+                <form method="post" action="/guess" class="row">
+                    <input type="hidden" name="secret" value="{{ secret }}" autocomplete="off">
+                    <input type="hidden" name="lo" value="{{ lo }}" autocomplete="off">
+                    <input type="hidden" name="hi" value="{{ hi }}" autocomplete="off">
+                    <input type="hidden" name="attempts" value="{{ attempts }}" autocomplete="off">
+                    <label>Your guess
+                        <input type="text" name="guess" placeholder="e.g., 42">
+                    </label>
+                    <button type="submit">Check</button>
+                </form>
+            </section>
+            {% endif %}
+
+    {% if result %}
+            <p class="{{ 'ok' if 'Correct!' in result else 'hint' }}">{{ result }}</p>
+            {% else %}
+            <p class="hint">Set a range to start the game.</p>
+            {% endif %}
+        </div>
+        <script>
+    const btn = document.getElementById("themeBtn");
+    function setTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("numg-theme", theme);
+      btn.textContent = theme === "dark" ? "☀️" : "🌙";
+    }
+    const saved = localStorage.getItem("numg-theme");
+    if (saved) setTheme(saved);
+    else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) setTheme("dark");
+    btn.addEventListener("click", () => {
+      const cur = document.documentElement.getAttribute("data-theme") || "light";
+      setTheme(cur === "light" ? "dark" : "light");
+    });
+        </script>
+    </body>
+</html>

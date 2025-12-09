@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Password Strength Checker</h1>
+    <label for="pw">Enter password</label>
+    <input id="pw" type="password" placeholder="Type here…" autocomplete="off" />
+    <div class="bar">
+      <div id="barfill" class="bar-fill" style="width:0%"></div>
+    </div>
+    <p id="level">Strength: —</p>
+    <ul id="tips" class="tips"></ul>
+  </div>
+
+  <script>
+    const pw = document.getElementById("pw");
+    const bar = document.getElementById("barfill");
+    const level = document.getElementById("level");
+    const tips = document.getElementById("tips");
+
+    const colors = {
+      0: "#dc2626", // very weak
+      1: "#dc2626",
+      2: "#ea580c", // weak
+      3: "#ca8a04", // moderate
+      4: "#16a34a", // strong
+      5: "#16a34a"  // very strong
+    };
+
+    let timer;
+    pw.addEventListener("input", () => {
+      clearTimeout(timer);
+      timer = setTimeout(async () => {
+        const form = new FormData();
+        form.append("password", pw.value);
+        const res = await fetch("/check", { method: "POST", body: form });
+        const data = await res.json();
+        const pct = (data.score / 5) * 100;
+        bar.style.width = pct + "%";
+        bar.style.background = colors[data.score];
+        level.textContent = `Strength: ${data.level} (${data.score}/5)`;
+        tips.innerHTML = data.score === 5
+          ? `<li>Nice! ✅</li>`
+          : data.tips.map(t => `<li>${t}</li>`).join("");
+      }, 150); // small debounce
+    });
+  </script>
+</body>
+</html>

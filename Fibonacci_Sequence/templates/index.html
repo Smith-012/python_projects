@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Fibonacci Generator</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <div class="card">
+            <h1>🧮 Fibonacci Generator</h1>
+            <form method="post" action="/generate" class="row">
+                <label for="n">Number of terms ({{ min_terms }}–{{ max_terms }})</label>
+                <input
+                    id="n"
+                    name="n"
+                    type="text"
+                    value="{{ n or '' }}"
+                    placeholder="e.g., 10"
+                >
+                <button type="submit">Generate</button>
+            </form>
+            {% if error %}
+            <p class="err">{{ error }}</p>
+            {% endif %}
+
+    {% if seq %}
+            <h3>Result ({{ n }} terms)</h3>
+            <!-- ✅ Use the ready-to-render string from Flask -->
+            <p class="seq">{{ display_seq }}</p>
+            {% endif %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>String Reversal</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>String Reversal</h1>
+
+    <label for="txt">Enter text</label>
+    <input id="txt" type="text" placeholder="Type something…" autocomplete="off" />
+
+    <button id="btn">Reverse</button>
+
+    <label for="out">Reversed</label>
+    <input id="out" type="text" readonly />
+
+    <p class="hint">Tip: It also reverses emojis and unicode correctly.</p>
+  </div>
+
+  <script>
+    const txt = document.getElementById("txt");
+    const out = document.getElementById("out");
+    const btn = document.getElementById("btn");
+
+    async function doReverse() {
+      const form = new FormData();
+      form.append("text", txt.value);
+      const res = await fetch("/reverse", { method: "POST", body: form });
+      const data = await res.json();
+      out.value = data.reversed;
+    }
+
+    btn.addEventListener("click", doReverse);
+    txt.addEventListener("input", doReverse); // live update
+  </script>
+</body>
+</html>

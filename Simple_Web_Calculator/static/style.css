@@ -1,0 +1,101 @@
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #111827;
+  --muted: #374151;
+  --border: #e5e7eb;
+  --accent: #6366f1;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #cbd5e1;
+  --border: #1f2937;
+  --accent: #8b5cf6;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+body {
+  margin: 0;
+  padding: 32px;
+  background: var(--bg);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 660px;
+  background: var(--card);
+  color: var(--text);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.theme-btn {
+  border: 1px solid var(--border);
+  background: transparent;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 120px 1fr;
+  gap: 12px;
+  margin-top: 8px;
+}
+label {
+  display: block;
+  margin: 6px 0;
+  color: var(--muted);
+}
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text);
+}
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent) 30%, transparent);
+}
+
+.calc-btn {
+  grid-column: 1 / -1;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 12px;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+.calc-btn:hover {
+  filter: brightness(0.95);
+}
+
+.result {
+  margin-top: 14px;
+  font-weight: 600;
+}
