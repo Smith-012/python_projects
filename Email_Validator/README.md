@@ -85,6 +85,3 @@ invalid: bob@@x.com, no-at.com, me@.com, me@host, space @bad.com
 ```
 
 ---
-
-## 📜 License
-Open-source. Use freely.
