@@ -61,6 +61,3 @@ def count_words(text: str) -> dict[str, int]:
 ```
 
 ---
-
-## 📜 License
-Open-source. Use freely.
