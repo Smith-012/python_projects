@@ -73,6 +73,3 @@ palindrome-checker/
 - `hello` → not a palindrome
 
 ---
-
-## 📜 License
-Open-source. Use freely.
