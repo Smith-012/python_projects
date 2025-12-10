@@ -36,6 +36,3 @@ python gui_hybrid_scraper.py
 ## Notes
 - Check robots.txt
 - JS-heavy sites may require Selenium/Playwright
-
-## Author
-Sp
