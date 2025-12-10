@@ -139,12 +139,6 @@ http://127.0.0.1:5000/
 
 ---
 
-## 📜 License
-
-MIT — Free to use, modify, and share. Attribution appreciated.
-
----
-
 ## 🙌 Credits
 
 - **NSE India** for the symbols CSV
@@ -152,7 +146,3 @@ MIT — Free to use, modify, and share. Attribution appreciated.
 - **SweetAlert2** for clean modals/toasts (web)
 
 ---
-
-### ❤️ Need tweaks?
-- Want auto-refresh intervals, P/L with buy price, or holdings persistence?  
-  I can extend both apps for you.
