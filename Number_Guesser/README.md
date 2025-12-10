@@ -59,6 +59,3 @@ secret = random.randint(low, high)
 ```
 
 ---
-
-## 📜 License
-Open-source. Use freely.
