@@ -78,6 +78,3 @@ calculator/
 - 9 / 0 → error message
 
 ---
-
-## 📜 License
-Open-source. Use freely.

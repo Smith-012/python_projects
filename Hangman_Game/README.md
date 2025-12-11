@@ -110,6 +110,3 @@ Features:
 8. Exit button stops server + closes tab  
 
 ---
-
-## 📜 License  
-Free to use and modify.

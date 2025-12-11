@@ -54,6 +54,3 @@ fibonacci/
 │     └── style.css
 └── README.md
 ```
-
-## 📜 License
-Open-source. Use freely.

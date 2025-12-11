@@ -64,6 +64,3 @@ attempts = 0
 ```
 
 ---
-
-## 📜 License
-Open-source. Use freely.

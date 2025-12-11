@@ -68,6 +68,3 @@ temperature-converter/
 - 212°F → 100°C
 
 ---
-
-## 📜 License
-Open-source. Use freely.

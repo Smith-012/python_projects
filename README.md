@@ -5,10 +5,10 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Projects-22-red?style=for-the-badge" alt="projects" />
-  <img src="https://img.shields.io/badge/Language-Python-darkgreen?style=for-the-badge" alt="languages" />
-  <img src="https://img.shields.io/badge/Frameworks-Flask%20%7C%20Tkinter%20%7C%20PyQt-orange?style=for-the-badge" alt="frameworks" />
-  <img src="https://img.shields.io/github/stars/Smith-012/python_projects?style=for-the-badge" alt="stars" />
+  <img src="https://img.shields.io/badge/Projects-24-red?style=for-the-badge" alt="projects" />
+  <img src="https://img.shields.io/badge/Frameworks-Flask%20%7C%20Tkinter-orange?style=for-the-badge" alt="frameworks" />
+  <img src="https://img.shields.io/github/stars/Smith-012/python_projects?style=for-the-badge" alt="stars" /><br>
+  <img src="https://img.shields.io/badge/Languages-Python/HTML/CSS/JS-darkgreen?style=for-the-badge" alt="languages" />
 </p>
 
 ---
