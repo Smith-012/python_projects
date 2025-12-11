@@ -129,11 +129,7 @@ The app will automatically:
 
 ## 🖼️ UI Preview
 
-```markdown
 ![UI Preview](Example.png)
-```
-
-(Place your screenshot as `images/ui.png` if using GitHub)
 
 ---
 
