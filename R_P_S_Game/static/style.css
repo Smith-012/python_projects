@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: #0b1220;
+  color: #e6edf7;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.app {
+  width: 640px;
+  background: #0f172a;
+  padding: 22px 28px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  text-align: center;
+  font-size: 26px;
+  margin: 0 0 16px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #b3c0d6;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.choices button {
+  cursor: pointer;
+  background: #1b2a4a;
+  color: #e6edf7;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  flex: 1;
+  margin: 0 6px;
+}
+.choices button:hover {
+  background: #23365f;
+}
+
+.picks {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0 10px;
+}
+.pick-title {
+  color: #9fb7ff;
+  font-weight: 700;
+}
+.pick-title.right {
+  text-align: right;
+}
+.big {
+  font-size: 45px;
+}
+.big.right {
+  text-align: right;
+}
+
+.result {
+  margin-top: 10px;
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 10px;
+  background: #0b1220;
+  transition: background 0.2s;
+}
+
+.footer {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.footer .ghost {
+  background: #0f172a;
+  color: #9fb7ff;
+  border: 1px solid #1b2a4a;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.footer .ghost:hover {
+  background: #152039;
+}
+
+/* Modal */
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.modal {
+  background: #101a30;
+  padding: 20px;
+  border-radius: 12px;
+  width: 720px;
+  max-height: 80vh;
+  overflow: auto;
+}
+.modal h2 {
+  text-align: center;
+  margin-top: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #d0d8e8;
+}
+th,
+td {
+  padding: 8px;
+  border-bottom: 1px solid #23365f;
+  text-align: center;
+}
+.close-btn {
+  margin-top: 12px;
+  padding: 8px 14px;
+  background: #23365f;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #e6edf7;
+}
